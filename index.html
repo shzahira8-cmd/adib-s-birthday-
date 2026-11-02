@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Adib ♡</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  color: #45647e;
+  background: #f0f8ff;
+  overflow-x: hidden;
+}
+
+:root {
+  --blue: #91c5e8;
+  --dark: #497a9e;
+  --light: #e3f3ff;
+  --white: #ffffff;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #f5fbffed;
+  backdrop-filter: blur(10px);
+  padding: 15px 5px;
+  text-align: center;
+  box-shadow: 0 2px 12px #a9cde555;
+}
+
+nav a {
+  text-decoration: none;
+  color: #497a9e;
+  font-size: 11px;
+  font-weight: bold;
+  margin: 0 8px;
+}
+
+section {
+  padding: 80px 18px;
+  text-align: center;
+  min-height: 75vh;
+  position: relative;
+}
+
+h1, h2, .script {
+  font-family: 'Great Vibes', cursive;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 75px;
+  color: #6099c1;
+  margin: 15px;
+}
+
+h2 {
+  font-size: 52px;
+  color: #649bc0;
+}
+
+p {
+  line-height: 1.9;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 13px 25px;
+  background: #8ebde0;
+  color: white;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:hover {
+  transform: scale(1.06);
+  background: #649bc0;
+}
+
+.small {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #82abc9;
+}
+
+.hero {
+  min-height: 93vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(150deg,#d9edff,#f8fcff,#c7e5fa);
+  overflow: hidden;
+}
+
+.hero p {
+  max-width: 500px;
+}
+
+.hero .name {
+  font-size: 32px;
+  font-weight: 600;
+  color: #497a9e;
+}
+
+.cloud {
+  position: absolute;
+  font-size: 65px;
+  opacity: .45;
+  animation: cloudMove 9s infinite alternate ease-in-out;
+}
+
+.c1 {top: 10%;left: 5%}
+.c2 {bottom: 12%;right: 6%;animation-delay: 2s}
+
+@keyframes cloudMove {
+  to {transform: translateX(25px)}
+}
+
+@keyframes float {
+  0% {transform: translateY(0);opacity: 1}
+  100% {transform: translateY(-105vh);opacity: 0}
+}
+
+@keyframes pulse {
+  50% {transform: scale(1.13)}
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  z-index: 1;
+  pointer-events: none;
+  animation: float 8s linear forwards;
+}
+
+.music-control {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 200;
+}
+
+.music-control button {
+  box-shadow: 0 4px 15px #729fc766;
+}
+
+.card {
+  max-width: 650px;
+  background: white;
+  border-radius: 22px;
+  margin: 30px auto;
+  padding: 30px 25px;
+  box-shadow: 0 8px 30px #8bb7d533;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+  max-width: 950px;
+  margin: 35px auto;
+}
+
+.photo {
+  background: white;
+  padding: 10px 10px 20px;
+  box-shadow: 0 5px 15px #799fbb44;
+  transform: rotate(-2deg);
+  transition: .3s;
+}
+
+.photo:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.photo:hover {
+  transform: rotate(0) scale(1.05);
+}
+
+.photo img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+  background: #e2f1fb;
+}
+
+.photo p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.memory-note {
+  font-size: 13px;
+  color: #799fbb;
+}
+
+.envelope {
+  font-size: 85px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+
+#letter {
+  display: none;
+  text-align: left;
+  padding: 15px;
+  background: #f0f8ff;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
+  max-width: 650px;
+  margin: 30px auto;
+}
+
+.reason {
+  background: white;
+  border-radius: 18px;
+  padding: 20px 10px;
+  box-shadow: 0 4px 15px #8bb7d522;
+}
+
+.reason span {
+  font-size: 30px;
+}
+
+.story {
+  max-width: 650px;
+  margin: auto;
+  text-align: left;
+}
+
+.story-item {
+  background: white;
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 5px solid #9ac8e8;
+}
+
+.invitation {
+  max-width: 570px;
+  margin: 30px auto;
+  padding: 30px 20px;
+  background: white;
+  border: 2px dashed #91bde0;
+  border-radius: 22px;
+  box-shadow: 0 8px 30px #8bb7d533;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+
+.countdown div {
+  background: #e8f5ff;
+  border-radius: 12px;
+  padding: 15px;
+  min-width: 65px;
+}
+
+.countdown strong {
+  font-size: 23px;
+  color: #497a9e;
+}
+
+footer {
+  background: #d9edff;
+  padding: 35px 15px;
+  text-align: center;
+}
+
+@media(max-width:600px) {
+  h1 {font-size: 53px}
+  h2 {font-size: 42px}
+  .gallery {grid-template-columns: repeat(2,1fr);gap: 12px}
+  .photo img {height: 145px}
+  nav a {font-size: 9px;margin: 0 4px}
+  .reasons {grid-template-columns: repeat(2,1fr)}
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="music-control">
+  <button onclick="toggleMusic()" id="musicBtn">
+    🎵 Play Our Song
+  </button>
+</div>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#home">HOME</a>
+  <a href="#story">OUR STORY</a>
+  <a href="#memories">MEMORIES</a>
+  <a href="#reasons">WHY YOU</a>
+  <a href="#letter">LETTER</a>
+  <a href="#party">PARTY</a>
+</nav>
+
+<!-- SECTION 1: HOME -->
+<section class="hero" id="home">
+
+  <div class="cloud c1">☁️</div>
+  <div class="cloud c2">☁️</div>
+
+  <div style="font-size:65px">🩵</div>
+
+  <p class="small">A LITTLE SURPRISE JUST FOR YOU</p>
+
+  <h1>Happy Birthday</h1>
+
+  <div class="name">Muhammad Adib Adli ♡</div>
+
+  <p>
+    To the person who makes my world a little brighter,
+    my days a little happier and my heart a little fuller.
+    Today is all about YOU!
+  </p>
+
+  <p>November 15, 2026</p>
+
+  <a href="#story">
+    <button>Open Your Surprise ♡</button>
+  </a>
+
+  <p style="font-size:13px">Scroll down, my love ↓</p>
+
+</section>
+
+<!-- SECTION 2: OUR STORY -->
+<section id="story">
+
+  <p class="small">EVERY LOVE STORY IS BEAUTIFUL</p>
+
+  <h2>Our Little Love Story</h2>
+
+  <div class="story">
+
+    <div class="story-item">
+      <h3>♡ The Beginning</h3>
+      <p>
+        Every beautiful story has a beginning.
+        I'm so glad that our paths crossed and
+        that I got the chance to know you.
+      </p>
+    </div>
+
+    <div class="story-item">
+      <h3>♡ The Little Moments</h3>
+      <p>
+        From random conversations, silly jokes,
+        little arguments and endless laughter,
+        every moment with you means something to me.
+      </p>
+    </div>
+
+    <div class="story-item">
+      <h3>♡ My Favourite Person</h3>
+      <p>
+        You are someone I can laugh with,
+        share my thoughts with and create
+        beautiful memories with.
+      </p>
+    </div>
+
+    <div class="story-item">
+      <h3>♡ More Chapters To Come</h3>
+      <p>
+        I hope this is only the beginning of
+        many more beautiful memories together.
+        Here's to us and our little story.
+      </p>
+    </div>
+
+  </div>
+
+  <div style="font-size:35px">🩵☁️🩵</div>
+
+</section>
+
+<!-- SECTION 3: MEMORIES -->
+<section id="memories" style="background:#e5f3ff">
+
+  <p class="small">15 LITTLE PIECES OF HAPPINESS</p>
+
+  <h2>Our Beautiful Memories</h2>
+
+  <p class="memory-note">
+    Every picture holds a memory I never want to forget.
+  </p>
+
+  <div class="gallery" id="gallery"></div>
+
+  <p>And I can't wait to make more memories with you. ♡</p>
+
+</section>
+
+<!-- SECTION 4: WHY I LOVE YOU -->
+<section id="reasons">
+
+  <p class="small">A LITTLE REMINDER</p>
+
+  <h2>Reasons Why I Love You</h2>
+
+  <p>There are a million reasons, but here are a few...</p>
+
+  <div class="reasons">
+
+    <div class="reason">
+      <span>🩵</span>
+      <h3>Your Smile</h3>
+      <p>Your smile makes my day better.</p>
+    </div>
+
+    <div class="reason">
+      <span>☁️</span>
+      <h3>Your Presence</h3>
+      <p>Everything feels better with you around.</p>
+    </div>
+
+    <div class="reason">
+      <span>🧸</span>
+      <h3>Your Personality</h3>
+      <p>I love the little things that make you YOU.</p>
+    </div>
+
+    <div class="reason">
+      <span>💌</span>
+      <h3>Your Love</h3>
+      <p>Thank you for making me feel special.</p>
+    </div>
+
+    <div class="reason">
+      <span>🌷</span>
+      <h3>Your Kindness</h3>
+      <p>I appreciate the little things you do.</p>
+    </div>
+
+    <div class="reason">
+      <span>✨</span>
+      <h3>Simply You</h3>
+      <p>Because being you is already enough.</p>
+    </div>
+
+  </div>
+
+  <h2 style="font-size:39px">
+    You are my favourite person. ♡
+  </h2>
+
+</section>
+
+<!-- SECTION 5: BIRTHDAY LETTER -->
+<section id="letter" style="background:#e5f3ff">
+
+  <p class="small">SOMETHING FROM MY HEART</p>
+
+  <h2>A Letter For You</h2>
+
+  <div class="card">
+
+    <div class="envelope" onclick="openLetter()">
+      💌
+    </div>
+
+    <p>Tap the envelope to open your letter, sayang.</p>
+
+    <div id="letterContent">
+
+      <h2 style="font-size:40px">Dear Adib,</h2>
+
+      <p>
+        Happy Birthday, my love! 🩵
+      </p>
+
+      <p>
+        First of all, I want to say how grateful I am
+        to have you in my life. Today is your special
+        day, and I hope you know just how important
+        and precious you are to me.
+      </p>
+
+      <p>
+        Thank you for being part of my life.
+        Thank you for all the laughter, the little
+        moments, the conversations and memories
+        that we have created together.
+      </p>
+
+      <p>
+        I know life isn't always perfect.
+        We might have difficult days, misunderstandings
+        and moments when things don't go as planned.
+        But I hope we will always choose to understand
+        each other, support each other and grow together.
+      </p>
+
+      <p>
+        My wish for you is that you always stay healthy,
+        happy and successful. May all your dreams come
+        true, may your efforts bring beautiful results
+        and may life give you countless reasons to smile.
+      </p>
+
+      <p>
+        Please never doubt how special you are.
+        You deserve all the happiness in this world.
+      </p>
+
+      <p>
+        I hope I can celebrate many more birthdays
+        with you and create a thousand more memories.
+      </p>
+
+      <h2 style="font-size:38px">I love you, Adib. 🩵</h2>
+
+      <p>With all my love,</p>
+      <p class="script" style="font-size:35px">
+        Yours always ♡
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SECTION 6: BIRTHDAY INVITATION -->
+<section id="party">
+
+  <p class="small">ONE MORE SPECIAL SURPRISE</p>
+
+  <h2>You're Invited!</h2>
+
+  <div class="invitation">
+
+    <div style="font-size:65px">🎂🎈🩵</div>
+
+    <p class="small">SAVE THE DATE</p>
+
+    <h2 style="font-size:47px">
+      Birthday Celebration
+    </h2>
+
+    <h3>For Muhammad Adib Adli</h3>
+
+    <p>
+      Because your birthday deserves to be celebrated!
+      Let's make another beautiful memory together.
+    </p>
+
+    <hr style="border:1px dashed #91bde0">
+
+    <h3>📅 15 NOVEMBER 2026</h3>
+
+    <h3>⏰ TIME: TO BE ANNOUNCED</h3>
+
+    <h3>📍 LOCATION: TO BE ANNOUNCED</h3>
+
+    <hr style="border:1px dashed #91bde0">
+
+    <h3>COUNTDOWN TO YOUR SPECIAL DAY</h3>
+
+    <div class="countdown">
+
+      <div>
+        <strong id="days">00</strong>
+        <br>Days
+      </div>
+
+      <div>
+        <strong id="hours">00</strong>
+        <br>Hours
+      </div>
+
+      <div>
+        <strong id="minutes">00</strong>
+        <br>Minutes
+      </div>
+
+      <div>
+        <strong id="seconds">00</strong>
+        <br>Seconds
+      </div>
+
+    </div>
+
+    <p>
+      I can't wait to celebrate this beautiful day with you!
+    </p>
+
+    <button onclick="rsvp()">
+      YES! LET'S CELEBRATE ♡
+    </button>
+
+    <p id="rsvpMessage"></p>
+
+  </div>
+
+</section>
+
+<!-- FINAL MESSAGE -->
+<section class="hero" style="min-height:70vh">
+
+  <div style="font-size:65px">🩵</div>
+
+  <p class="small">ONE LAST THING...</p>
+
+  <h1 style="font-size:65px">Happy Birthday, Adib!</h1>
+
+  <p>
+    No matter how many birthdays pass,
+    I hope you always remember that you are
+    loved, appreciated and special.
+  </p>
+
+  <h2 style="font-size:50px">
+    Here's to you, my favourite human.
+  </h2>
+
+  <p>Forever grateful for you. ♡</p>
+
+  <div style="font-size:35px">☁️🧸💌</div>
+
+</section>
+
+<footer>
+
+  <h2 style="font-size:42px">Made With Love</h2>
+
+  <p>For Muhammad Adib Adli ♡</p>
+
+  <p>November 15, 2026</p>
+
+  <p style="font-size:12px">
+    A little website, a lot of love. 🩵
+  </p>
+
+</footer>
+
+<script>
+
+// =================================
+// 15 MEMORY PHOTO SLOTS
+// =================================
+
+const photos = [
+ "images/memory1.jpg",
+ "images/memory2.jpg",
+ "images/memory3.jpg",
+ "images/memory4.jpg",
+ "images/memory5.jpg",
+ "images/memory6.jpg",
+ "images/memory7.jpg",
+ "images/memory8.jpg",
+ "images/memory9.jpg",
+ "images/memory10.jpg",
+ "images/memory11.jpg",
+ "images/memory12.jpg",
+ "images/memory13.jpg",
+ "images/memory14.jpg",
+ "images/memory15.jpg"
+];
+
+const captions = [
+ "Our first memory ♡",
+ "My favourite smile",
+ "A beautiful day",
+ "Just the two of us",
+ "Little moments",
+ "Forever favourite",
+ "A day to remember",
+ "Sweet memories",
+ "My happy place",
+ "Our silly moments",
+ "Together is better",
+ "One of my favourites",
+ "Another beautiful day",
+ "My favourite person",
+ "More memories to come ♡"
+];
+
+const gallery = document.getElementById("gallery");
+
+photos.forEach((src, i) => {
+
+  const div = document.createElement("div");
+  div.className = "photo";
+
+  const img = document.createElement("img");
+  img.src = src;
+  img.alt = "Memory " + (i + 1);
+
+  img.onerror = () => {
+    img.style.height = "190px";
+    img.alt = "Upload memory " + (i + 1);
+  };
+
+  const caption = document.createElement("p");
+  caption.textContent = captions[i];
+
+  div.appendChild(img);
+  div.appendChild(caption);
+
+  gallery.appendChild(div);
+
+});
+
+
+// =================================
+// MUSIC PLAYER
+// =================================
+
+const music = document.getElementById("music");
+
+function toggleMusic() {
+
+  const btn = document.getElementById("musicBtn");
+
+  if (music.paused) {
+
+    music.play().then(() => {
+      btn.textContent = "⏸ Pause Our Song";
+    }).catch(() => {
+      btn.textContent = "🎵 Tap To Play";
+    });
+
+  } else {
+
+    music.pause();
+    btn.textContent = "🎵 Play Our Song";
+
+  }
+
+}
+
+
+// =================================
+// OPEN BIRTHDAY LETTER
+// =================================
+
+function openLetter() {
+
+  const letter = document.getElementById("letterContent");
+
+  letter.style.display = "block";
+
+  document.querySelector(".envelope").textContent = "💙";
+
+}
+
+
+// =================================
+// COUNTDOWN
+// Birthday: 15 November 2026
+// Countdown to the start of that date
+// =================================
+
+const birthdayDate = new Date(2026, 10, 15, 0, 0, 0).getTime();
+
+function updateCountdown() {
+
+  const distance = birthdayDate - Date.now();
+
+  if (distance <= 0) {
+
+    document.querySelector(".countdown").innerHTML =
+      "🎉 HAPPY BIRTHDAY ADIB! 🎉";
+
+    return;
+
+  }
+
+  const days = Math.floor(distance / 86400000);
+
+  const hours = Math.floor((distance % 86400000) / 3600000);
+
+  const minutes = Math.floor((distance % 3600000) / 60000);
+
+  const seconds = Math.floor((distance % 60000) / 1000);
+
+  document.getElementById("days").textContent = days;
+
+  document.getElementById("hours").textContent = hours;
+
+  document.getElementById("minutes").textContent = minutes;
+
+  document.getElementById("seconds").textContent = seconds;
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown, 1000);
+
+
+// =================================
+// RSVP
+// =================================
+
+function rsvp() {
+
+  document.getElementById("rsvpMessage").textContent =
+    "YAY! It's a date! Can't wait to celebrate with you! 🩵";
+
+}
+
+
+// =================================
+// FLOATING HEARTS
+// =================================
+
+function createHeart() {
+
+  const heart = document.createElement("div");
+
+  heart.className = "heart";
+
+  heart.textContent = ["♡", "💙", "🩵", "✧"][Math.floor(Math.random() * 4)];
+
+  heart.style.left = Math.random() * 100 + "vw";
+
+  heart.style.fontSize = (15 + Math.random() * 20) + "px";
+
+  heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 10000);
+
+}
+
+setInterval(createHeart, 800);
+
+</script>
+
+</body>
+</html>
