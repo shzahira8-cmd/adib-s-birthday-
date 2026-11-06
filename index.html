@@ -3,36 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Happy Birthday Muhammad Adib Adli 💙</title>
-
-<div class="music-box">
-
-  <h2>🎵 Our Special Song 💙</h2>
-
-  <p class="music-caption">
-    A little song for my favourite person.
-    Press play and enjoy this special moment. 🤍
-  </p>
-
-  <h3 style="color:#377bb7;margin-bottom:15px">
-    Jatuh Suka — TULUS
-  </h3>
-
-  <div class="music-player">
-    <iframe
-      src="https://www.youtube.com/embed/NRGDT2UUlsk?playsinline=1&rel=0"
-      title="Jatuh Suka by TULUS"
-      allow="autoplay; encrypted-media; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-
-  <p class="music-caption">
-    Every love story has its own melody. 💙
-  </p>
-
-</div>
 
 <style>
 * {
@@ -43,7 +14,7 @@
 
 body {
   font-family: Georgia, serif;
-  background: linear-gradient(135deg,#dceeff,#ffffff,#b9d9f5);
+  background: linear-gradient(135deg, #dceeff, #ffffff, #b9d9f5);
   color: #234568;
   min-height: 100vh;
   overflow-x: hidden;
@@ -80,10 +51,10 @@ body {
   margin: 45px auto;
   padding: 40px 25px;
   text-align: center;
-  background: rgba(255,255,255,.92);
+  background: rgba(255, 255, 255, .92);
   border: 2px solid white;
   border-radius: 30px;
-  box-shadow: 0 15px 45px rgba(52,104,157,.18);
+  box-shadow: 0 15px 45px rgba(52, 104, 157, .18);
 }
 
 .label {
@@ -94,7 +65,7 @@ body {
 }
 
 h1 {
-  font-size: clamp(35px,8vw,60px);
+  font-size: clamp(35px, 8vw, 60px);
   color: #377bb7;
   margin: 22px 0 12px;
 }
@@ -122,21 +93,26 @@ h1 {
   color: #506d89;
 }
 
-button {
-  background: linear-gradient(90deg,#4d91ce,#86b8e7);
+button, .play-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #4d91ce, #86b8e7);
   color: white;
   border: none;
   padding: 15px 27px;
   border-radius: 30px;
   font-size: 15px;
+  font-family: inherit;
+  font-weight: bold;
+  text-decoration: none;
   cursor: pointer;
   margin: 10px;
   box-shadow: 0 6px 15px #c1d9ef;
-  transition: .3s;
+  transition: all 0.3s ease;
 }
 
-button:hover {
+button:hover, .play-btn:hover {
   transform: translateY(-4px);
+  box-shadow: 0 10px 20px #b0d2f0;
 }
 
 .hidden {
@@ -165,36 +141,18 @@ button:hover {
   margin: 35px auto;
 }
 
-.
 .music-box {
-  background: linear-gradient(135deg,#dceeff,#ffffff);
+  background: linear-gradient(135deg, #dceeff, #ffffff);
   border: 2px solid #b9d9f5;
   border-radius: 25px;
   padding: 25px 18px;
   margin: 30px 0;
-  box-shadow: 0 8px 25px rgba(60,120,180,.12);
+  box-shadow: 0 8px 25px rgba(60, 120, 180, .12);
 }
 
 .music-box h2 {
   color: #377bb7;
   margin-bottom: 12px;
-}
-
-.music-player {
-  position: relative;
-  width: 100%;
-  max-width: 420px;
-  margin: auto;
-  border-radius: 18px;
-  overflow: hidden;
-  background: #dceeff;
-}
-
-.music-player iframe {
-  width: 100%;
-  height: 80px;
-  border: none;
-  display: block;
 }
 
 .music-caption {
@@ -204,7 +162,7 @@ button:hover {
 }
 
 .invitation {
-  background: linear-gradient(145deg,#eaf5ff,#ffffff);
+  background: linear-gradient(145deg, #eaf5ff, #ffffff);
   border: 2px dashed #8bb9e2;
   border-radius: 24px;
   padding: 28px 20px;
@@ -265,45 +223,38 @@ button:hover {
   <div class="cake">🎂</div>
 
   <p class="message">
-    Today is not just another day.
-    Today is the day someone incredibly special
-    came into this world.
+    Today is not just another day.<br>
+    Today is the day someone incredibly special<br>
+    came into this world.<br><br>
 
-    And I am so lucky to have you in my life. 🤍
+    And I am so lucky to have you in my life. 🤍<br><br>
 
-    Happy birthday to the person who makes
+    Happy birthday to the person who makes<br>
     my world a little brighter every day.
   </p>
 
   <!-- SPECIAL SONG -->
-
   <div class="music-box">
+    <h2>🎵 Our Special Song 💙</h2>
 
-    <h2>🎵 A Song for You 💙</h2>
-
-    <p>
-      Every time I hear this song,
-      I hope it reminds you of us.
-
-      A little melody for someone
-      who means so much to me. 🤍
+    <p class="music-caption">
+      A little song for my favourite person.<br>
+      Press play and enjoy this special moment. 🤍
     </p>
 
-    <div style="font-weight:bold;color:#377bb7;margin-bottom:15px;">
+    <h3 style="color:#377bb7;margin-bottom:15px">
       Jatuh Suka — TULUS
+    </h3>
+
+    <div style="margin: 20px 0;">
+      <a href="https://www.youtube.com/watch?v=NRGDT2UUlsk" target="_blank" class="play-btn">
+        ▶ Play "Jatuh Suka — TULUS" on YouTube 💙
+      </a>
     </div>
 
-    <iframe
-      src="https://www.youtube.com/embed/NRGDT2UUlsk?rel=0&playsinline=1"
-      title="Jatuh Suka - TULUS"
-      allow="encrypted-media; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-
-    <p style="margin-top:15px;margin-bottom:0;">
-      Press play and enjoy our little moment. 💙
+    <p class="music-caption">
+      Every love story has its own melody. 💙
     </p>
-
   </div>
 
   <button onclick="showLetter()">
@@ -311,115 +262,60 @@ button:hover {
   </button>
 
   <div id="letter" class="letter hidden">
+    <h2>To My Dearest Adib 🤍</h2><br>
+    Happy Birthday, my love! 💙<br><br>
 
-    <h2>To My Dearest Adib 🤍</h2>
+    First of all, I want you to know how grateful I am to have you in my life.<br><br>
 
-    Happy Birthday, my love! 💙
+    Thank you for being part of my happiness, for making me smile, and for giving me beautiful memories that I will always treasure.<br><br>
 
-    <br><br>
+    On your special day, I pray that Allah blesses you with good health, endless happiness, success and everything your heart wishes for.<br><br>
 
-    First of all, I want you to know how grateful
-    I am to have you in my life.
+    May every step you take bring you closer to your dreams.<br><br>
 
-    Thank you for being part of my happiness,
-    for making me smile, and for giving me
-    beautiful memories that I will always treasure.
+    I hope you never stop believing in yourself. Even when life gets difficult, remember that you are capable of amazing things.<br><br>
 
-    <br><br>
+    I may not be able to give you the whole world, but I promise to keep supporting you, cheering for you and celebrating your little and big achievements.<br><br>
 
-    On your special day, I pray that Allah
-    blesses you with good health, endless happiness,
-    success and everything your heart wishes for.
+    Thank you for being YOU.<br><br>
 
-    May every step you take bring you closer
-    to your dreams.
+    I hope I get to celebrate many more birthdays with you in the years to come.<br><br>
 
-    <br><br>
+    <strong>Happy Birthday, Muhammad Adib Adli! 💙</strong><br><br>
 
-    I hope you never stop believing in yourself.
-    Even when life gets difficult,
-    remember that you are capable of amazing things.
-
-    <br><br>
-
-    I may not be able to give you the whole world,
-    but I promise to keep supporting you,
-    cheering for you and celebrating your little
-    and big achievements.
-
-    <br><br>
-
-    Thank you for being YOU.
-
-    I hope I get to celebrate many more birthdays
-    with you in the years to come.
-
-    <br><br>
-
-    <strong>
-      Happy Birthday, Muhammad Adib Adli! 💙
-    </strong>
-
-    <br><br>
-
-    With all my love,
+    With all my love,<br>
     Your Favourite Person ♡
-
   </div>
 
   <div class="divider"></div>
 
   <!-- BIRTHDAY INVITATION -->
-
   <div class="invitation">
-
     <div style="font-size:50px">🎉🎈🎂</div>
-
     <h2>You're Invited! 💌</h2>
-
     <h3>A Birthday Celebration for My Love</h3>
 
     <p class="message">
-
-      Dear Adib,
-
-      <br><br>
-
-      A special day deserves a special celebration!
-
-      I would love to make your birthday memorable
-      by spending this beautiful day together.
-
-      <br><br>
-
-      So get ready, my love!
-      We have a little birthday adventure waiting
-      for us. Let's make unforgettable memories
-      together! 💙
-
+      Dear Adib,<br><br>
+      A special day deserves a special celebration!<br><br>
+      I would love to make your birthday memorable by spending this beautiful day together.<br><br>
+      So get ready, my love! We have a little birthday adventure waiting for us. Let's make unforgettable memories together! 💙
     </p>
 
     <div class="details">
-
       <div>📅 <strong>Date:</strong> 15 November 2026</div>
-
       <div>⏰ <strong>Time:</strong> 8:00 AM</div>
-
       <div>📍 <strong>Celebration:</strong></div>
-
       <div>Samarahan → Serian → Kuching</div>
-
       <div>👔 <strong>Dress Code:</strong> Blue & White</div>
-
     </div>
 
     <h3 style="color:#377bb7">
-      Three places, one special day,
-      and my favourite person. 🤍
+      Three places, one special day, and my favourite person. 🤍
     </h3>
 
     <p class="message">
-      Your presence is my favourite gift.
+      Your presence is my favourite gift.<br>
       Let's make this birthday one to remember!
     </p>
 
@@ -427,38 +323,20 @@ button:hover {
       Yes! I'll Be There 💙
     </button>
 
-    <div id="rsvpMessage" class="hidden"
-         style="margin-top:15px;color:#377bb7;line-height:1.8">
-      Yayyy! It's a date! 🥰💙
-      <br>
+    <div id="rsvpMessage" class="hidden" style="margin-top:15px;color:#377bb7;line-height:1.8">
+      Yayyy! It's a date! 🥰💙<br>
       Can't wait to celebrate with you!
     </div>
-
   </div>
 
   <div class="divider"></div>
 
-  <h2 style="color:#377bb7">
-    One Last Thing... 🤍
-  </h2>
+  <h2 style="color:#377bb7">One Last Thing... 🤍</h2>
 
   <p class="message">
-
-    No matter how many birthdays come and go,
-    I hope I get to celebrate many more of them
-    with you.
-
-    <br><br>
-
-    You are special, you are loved,
-    and you deserve all the happiness in this world.
-
-    <br><br>
-
-    <strong>
-      Happy Birthday, my favourite human! 💙
-    </strong>
-
+    No matter how many birthdays come and go, I hope I get to celebrate many more of them with you.<br><br>
+    You are special, you are loved, and you deserve all the happiness in this world.<br><br>
+    <strong>Happy Birthday, my favourite human! 💙</strong>
   </p>
 
   <button onclick="celebrate()">
@@ -466,93 +344,50 @@ button:hover {
   </button>
 
   <div class="footer">
-    Made with endless love,
-    just for Muhammad Adib Adli. ♡
+    Made with endless love, just for Muhammad Adib Adli. ♡
   </div>
 
 </div>
 
 <script>
-
 // FLOATING HEARTS
-
 function createHearts() {
-
   const heart = document.createElement("div");
-
   heart.className = "heart";
-
-  heart.innerHTML = ["♡","♥","💙","🤍"][
-    Math.floor(Math.random()*4)
-  ];
-
+  heart.innerHTML = ["♡","♥","💙","🤍"][Math.floor(Math.random()*4)];
   heart.style.left = Math.random()*100 + "vw";
-
-  heart.style.fontSize =
-    (15+Math.random()*25) + "px";
-
-  heart.style.animationDuration =
-    (5+Math.random()*6) + "s";
-
+  heart.style.fontSize = (15+Math.random()*25) + "px";
+  heart.style.animationDuration = (5+Math.random()*6) + "s";
   document.getElementById("hearts").appendChild(heart);
-
   setTimeout(() => heart.remove(), 11000);
 }
-
 setInterval(createHearts, 500);
 
-
 // OPEN BIRTHDAY LETTER
-
 function showLetter() {
-
-  document.getElementById("letter")
-    .classList.toggle("hidden");
-
+  document.getElementById("letter").classList.toggle("hidden");
   celebrate();
 }
 
-
 // BIRTHDAY CONFETTI
-
 function celebrate() {
-
   for(let i=0; i<100; i++) {
-
     const item = document.createElement("div");
-
     item.className = "confetti";
-
-    item.innerHTML = ["💙","🤍","✨","🎉","♡"][
-      Math.floor(Math.random()*5)
-    ];
-
+    item.innerHTML = ["💙","🤍","✨","🎉","♡"][Math.floor(Math.random()*5)];
     item.style.left = Math.random()*100 + "vw";
-
-    item.style.animationDelay =
-      Math.random()*2 + "s";
-
-    item.style.fontSize =
-      (12+Math.random()*20) + "px";
-
+    item.style.animationDelay = Math.random()*2 + "s";
+    item.style.fontSize = (12+Math.random()*20) + "px";
     document.body.appendChild(item);
-
     setTimeout(() => item.remove(), 6000);
   }
 }
 
-
 // RSVP BUTTON
-
 function rsvp() {
-
-  document.getElementById("rsvpMessage")
-    .classList.remove("hidden");
-
+  document.getElementById("rsvpMessage").classList.remove("hidden");
   celebrate();
-
 }
-
 </script>
 
 </body>
