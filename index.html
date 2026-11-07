@@ -1,392 +1,421 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Muhammad Adib Adli 💙</title>
+<title>Happy Birthday, Adib! 💙</title>
 
 <style>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Georgia, serif;
-  background: linear-gradient(135deg, #dceeff, #ffffff, #b9d9f5);
-  color: #234568;
-  min-height: 100vh;
-  overflow-x: hidden;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #dff3ff, #ffffff, #b9dcff);
+    color: #24496f;
+    text-align: center;
+    overflow-x: hidden;
 }
 
-.hearts {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
+section {
+    padding: 65px 20px;
+    position: relative;
 }
 
-.heart {
-  position: absolute;
-  bottom: -40px;
-  color: #78aee8;
-  opacity: .6;
-  animation: floatUp linear forwards;
-}
-
-@keyframes floatUp {
-  to {
-    transform: translateY(-115vh) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-.container {
-  position: relative;
-  z-index: 1;
-  width: 90%;
-  max-width: 720px;
-  margin: 45px auto;
-  padding: 40px 25px;
-  text-align: center;
-  background: rgba(255, 255, 255, .92);
-  border: 2px solid white;
-  border-radius: 30px;
-  box-shadow: 0 15px 45px rgba(52, 104, 157, .18);
-}
-
-.label {
-  letter-spacing: 3px;
-  font-size: 12px;
-  color: #6395c5;
-  font-weight: bold;
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, #d8efff, #ffffff, #a9d4ff);
 }
 
 h1 {
-  font-size: clamp(35px, 8vw, 60px);
-  color: #377bb7;
-  margin: 22px 0 12px;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    color: #28649b;
+    margin-bottom: 18px;
+    animation: glow 2s infinite alternate;
+}
+
+h2 {
+    color: #28649b;
+    font-size: 2rem;
+    margin-bottom: 22px;
+}
+
+p {
+    line-height: 1.8;
+    font-size: 1.05rem;
 }
 
 .subtitle {
-  font-size: 21px;
-  color: #668caf;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
 }
 
-.cake {
-  font-size: 85px;
-  margin: 25px 0;
-  animation: bounce 2s infinite;
+button {
+    border: none;
+    background: #438bc7;
+    color: white;
+    padding: 14px 27px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 12px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px #7daed080;
 }
 
-@keyframes bounce {
-  50% { transform: translateY(-12px); }
+button:hover {
+    background: #245e91;
+    transform: scale(1.06);
 }
 
-.message {
-  font-size: 16px;
-  line-height: 1.9;
-  max-width: 540px;
-  margin: 20px auto;
-  color: #506d89;
-}
-
-button, .play-btn {
-  display: inline-block;
-  background: linear-gradient(90deg, #4d91ce, #86b8e7);
-  color: white;
-  border: none;
-  padding: 15px 27px;
-  border-radius: 30px;
-  font-size: 15px;
-  font-family: inherit;
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
-  margin: 10px;
-  box-shadow: 0 6px 15px #c1d9ef;
-  transition: all 0.3s ease;
-}
-
-button:hover, .play-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px #b0d2f0;
-}
-
-.hidden {
-  display: none;
+.card {
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 35px 25px;
+    background: #ffffffd9;
+    border: 1px solid #c6e3ff;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px #659acb30;
 }
 
 .letter {
-  background: #eff7ff;
-  padding: 25px;
-  border-radius: 20px;
-  margin: 25px 0;
-  line-height: 2;
-  color: #416587;
-  animation: appear .7s;
+    display: none;
+    text-align: left;
+    animation: appear 1s ease;
 }
 
-@keyframes appear {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.letter p {
+    margin-bottom: 15px;
 }
 
-.divider {
-  width: 70%;
-  height: 2px;
-  background: #d4e7f8;
-  margin: 35px auto;
-}
-
-.music-box {
-  background: linear-gradient(135deg, #dceeff, #ffffff);
-  border: 2px solid #b9d9f5;
-  border-radius: 25px;
-  padding: 25px 18px;
-  margin: 30px 0;
-  box-shadow: 0 8px 25px rgba(60, 120, 180, .12);
-}
-
-.music-box h2 {
-  color: #377bb7;
-  margin-bottom: 12px;
-}
-
-.music-caption {
-  color: #527da5;
-  line-height: 1.8;
-  margin: 15px 0;
+.cake {
+    font-size: 90px;
+    margin: 20px;
+    animation: bounce 2s infinite;
 }
 
 .invitation {
-  background: linear-gradient(145deg, #eaf5ff, #ffffff);
-  border: 2px dashed #8bb9e2;
-  border-radius: 24px;
-  padding: 28px 20px;
-  margin-top: 20px;
+    background: linear-gradient(135deg, #eaf6ff, #ffffff);
 }
 
-.invitation h2 {
-  color: #377bb7;
-  font-size: 30px;
-  margin-bottom: 15px;
+.invite-details {
+    margin: 20px 0;
+    line-height: 2.2;
+    font-size: 1.1rem;
 }
 
-.details {
-  line-height: 2.4;
-  color: #547b9e;
-  margin: 20px 0;
+.music-box {
+    max-width: 650px;
+    margin: 25px auto;
+    padding: 20px;
+    border-radius: 22px;
+    background: white;
+    box-shadow: 0 8px 25px #659acb30;
 }
 
-.footer {
-  margin-top: 35px;
-  color: #86a9ca;
-  font-size: 13px;
+.music-box iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: none;
+    border-radius: 15px;
 }
 
-.confetti {
-  position: fixed;
-  top: -15px;
-  z-index: 10;
-  animation: fall 4s linear forwards;
-  pointer-events: none;
+.music-note {
+    font-size: 0.95rem;
+    margin-top: 12px;
+    color: #557b9f;
 }
 
-@keyframes fall {
-  to {
-    transform: translateY(110vh) rotate(700deg);
-    opacity: 0;
-  }
+footer {
+    padding: 30px 15px;
+    background: #c8e5ff;
+    color: #245e91;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #6da9df;
+    animation: floatUp linear infinite;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #ffffff; }
+    to { text-shadow: 0 0 20px #75baff; }
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 50px 15px;
+    }
+
+    .card {
+        padding: 25px 18px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="hearts" id="hearts"></div>
+<!-- HOME / BIRTHDAY GREETING -->
+<section class="hero">
+    <p class="subtitle">A little surprise made with love...</p>
 
-<div class="container">
+    <h1>Happy Birthday!</h1>
 
-  <div class="label">
-    A SPECIAL DAY FOR MY SPECIAL PERSON
-  </div>
+    <h2>Dear Muhammad Adib Adli 💙</h2>
 
-  <h1>Happy Birthday! 💙</h1>
-
-  <div class="subtitle">
-    Muhammad Adib Adli 🤍
-  </div>
-
-  <div class="cake">🎂</div>
-
-  <p class="message">
-    Today is not just another day.<br>
-    Today is the day someone incredibly special<br>
-    came into this world.<br><br>
-
-    And I am so lucky to have you in my life. 🤍<br><br>
-
-    Happy birthday to the person who makes<br>
-    my world a little brighter every day.
-  </p>
-
-  <!-- SPECIAL SONG -->
-  <div class="music-box">
-    <h2>🎵 Our Special Song 💙</h2>
-
-    <p class="music-caption">
-      A little song for my favourite person.<br>
-      Press play and enjoy this special moment. 🤍
+    <p>
+        Today is all about celebrating you.<br>
+        Someone special deserves a day full of happiness,
+        laughter and beautiful memories.
     </p>
 
-    <h3 style="color:#377bb7;margin-bottom:15px">
-      Jatuh Suka — TULUS
-    </h3>
+    <div class="cake">🎂</div>
 
-    <div style="margin: 20px 0;">
-      <a href="https://www.youtube.com/watch?v=NRGDT2UUlsk" target="_blank" class="play-btn">
-        ▶ Play "Jatuh Suka — TULUS" on YouTube 💙
-      </a>
+    <p>Scroll down, because I have something special for you!</p>
+</section>
+
+<!-- SPECIAL LETTER -->
+<section>
+    <h2>💌 A Letter For You</h2>
+
+    <div class="card">
+        <p>
+            I have something I want you to read.
+            Every word comes straight from my heart.
+        </p>
+
+        <button onclick="openLetter()">
+            Open Your Special Letter 💙
+        </button>
+
+        <div class="letter" id="letter">
+            <br>
+            <p>Dear Adib,</p>
+
+            <p>
+                Happy Birthday to someone who means so much to me.
+                I hope this special day brings you endless happiness,
+                love and beautiful memories.
+            </p>
+
+            <p>
+                Thank you for being part of my life.
+                I am grateful for every laugh, every little moment
+                and every memory we have created together.
+            </p>
+
+            <p>
+                I hope all your dreams come true and that you always
+                find reasons to smile. May this new chapter bring
+                you success, good health and everything your heart wishes for.
+            </p>
+
+            <p>
+                No matter how busy life gets, I hope we continue
+                creating beautiful memories together.
+            </p>
+
+            <p>
+                Once again, happy birthday, my favourite person. 🤍
+            </p>
+
+            <p style="text-align:right;">
+                With love,<br>
+                Someone who cares about you so much 💙
+            </p>
+        </div>
     </div>
+</section>
 
-    <p class="music-caption">
-      Every love story has its own melody. 💙
-    </p>
-  </div>
+<!-- MUSIC -->
+<section>
+    <h2>🎵 A Song For You</h2>
 
-  <button onclick="showLetter()">
-    Open Your Special Letter 💌
-  </button>
-
-  <div id="letter" class="letter hidden">
-    <h2>To My Dearest Adib 🤍</h2><br>
-    Happy Birthday, my love! 💙<br><br>
-
-    First of all, I want you to know how grateful I am to have you in my life.<br><br>
-
-    Thank you for being part of my happiness, for making me smile, and for giving me beautiful memories that I will always treasure.<br><br>
-
-    On your special day, I pray that Allah blesses you with good health, endless happiness, success and everything your heart wishes for.<br><br>
-
-    May every step you take bring you closer to your dreams.<br><br>
-
-    I hope you never stop believing in yourself. Even when life gets difficult, remember that you are capable of amazing things.<br><br>
-
-    I may not be able to give you the whole world, but I promise to keep supporting you, cheering for you and celebrating your little and big achievements.<br><br>
-
-    Thank you for being YOU.<br><br>
-
-    I hope I get to celebrate many more birthdays with you in the years to come.<br><br>
-
-    <strong>Happy Birthday, Muhammad Adib Adli! 💙</strong><br><br>
-
-    With all my love,<br>
-    Your Favourite Person ♡
-  </div>
-
-  <div class="divider"></div>
-
-  <!-- BIRTHDAY INVITATION -->
-  <div class="invitation">
-    <div style="font-size:50px">🎉🎈🎂</div>
-    <h2>You're Invited! 💌</h2>
-    <h3>A Birthday Celebration for My Love</h3>
-
-    <p class="message">
-      Dear Adib,<br><br>
-      A special day deserves a special celebration!<br><br>
-      I would love to make your birthday memorable by spending this beautiful day together.<br><br>
-      So get ready, my love! We have a little birthday adventure waiting for us. Let's make unforgettable memories together! 💙
+    <p>
+        A little song to make your special day even more meaningful.
     </p>
 
-    <div class="details">
-      <div>📅 <strong>Date:</strong> 15 November 2026</div>
-      <div>⏰ <strong>Time:</strong> 8:00 AM</div>
-      <div>📍 <strong>Celebration:</strong></div>
-      <div>Samarahan → Serian → Kuching</div>
-      <div>👔 <strong>Dress Code:</strong> Blue & White</div>
+    <div class="music-box">
+        <iframe
+            src="https://www.youtube.com/embed/lD2cxb184OE?si=7gE8RVkztY1lMg2V"
+            title="A Birthday Song For You"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+        </iframe>
+
+        <p class="music-note">
+            Press Play and enjoy your special song. 🎧
+        </p>
     </div>
+</section>
 
-    <h3 style="color:#377bb7">
-      Three places, one special day, and my favourite person. 🤍
-    </h3>
+<!-- BIRTHDAY INVITATION -->
+<section class="invitation">
+    <h2>💙 You're Invited! 🤍</h2>
 
-    <p class="message">
-      Your presence is my favourite gift.<br>
-      Let's make this birthday one to remember!
-    </p>
+    <div class="card">
+        <h2>A Special Birthday Celebration</h2>
 
-    <button onclick="rsvp()">
-      Yes! I'll Be There 💙
-    </button>
+        <p>
+            Because your birthday deserves to be celebrated
+            with beautiful memories and happy moments.
+        </p>
 
-    <div id="rsvpMessage" class="hidden" style="margin-top:15px;color:#377bb7;line-height:1.8">
-      Yayyy! It's a date! 🥰💙<br>
-      Can't wait to celebrate with you!
+        <div class="invite-details">
+            <p>📅 <strong>Date:</strong> 15 November 2026</p>
+            <p>⏰ <strong>Time:</strong> 8:00 AM</p>
+            <p>📍 <strong>Journey:</strong></p>
+            <p>Samarahan → Serian → Kuching</p>
+            <p>👔 <strong>Dress Code:</strong> Blue & White</p>
+        </div>
+
+        <p>
+            Get ready for a day filled with fun,
+            laughter and unforgettable memories!
+        </p>
+
+        <button onclick="rsvp()">
+            Yes! I'm Ready! 💙
+        </button>
+
+        <p id="rsvpMessage"></p>
     </div>
-  </div>
+</section>
 
-  <div class="divider"></div>
+<!-- FINAL MESSAGE -->
+<section>
+    <h2>One Last Thing...</h2>
 
-  <h2 style="color:#377bb7">One Last Thing... 🤍</h2>
+    <div class="card">
+        <p style="font-size:1.2rem;">
+            I hope this little website makes you smile.
+        </p>
 
-  <p class="message">
-    No matter how many birthdays come and go, I hope I get to celebrate many more of them with you.<br><br>
-    You are special, you are loved, and you deserve all the happiness in this world.<br><br>
-    <strong>Happy Birthday, my favourite human! 💙</strong>
-  </p>
+        <p style="margin-top:15px;">
+            You deserve all the happiness in the world.
+            Enjoy your special day, Adib!
+        </p>
 
-  <button onclick="celebrate()">
-    Make a Birthday Wish! ✨
-  </button>
+        <div style="font-size:45px; margin-top:20px;">
+            💙🤍🎂
+        </div>
 
-  <div class="footer">
-    Made with endless love, just for Muhammad Adib Adli. ♡
-  </div>
+        <h2 style="margin-top:20px;">
+            Happy Birthday Once Again!
+        </h2>
+    </div>
+</section>
 
-</div>
+<footer>
+    Made with love, just for you. 💙<br>
+    © 2026 | A Special Birthday Surprise
+</footer>
 
 <script>
-// FLOATING HEARTS
-function createHearts() {
-  const heart = document.createElement("div");
-  heart.className = "heart";
-  heart.innerHTML = ["♡","♥","💙","🤍"][Math.floor(Math.random()*4)];
-  heart.style.left = Math.random()*100 + "vw";
-  heart.style.fontSize = (15+Math.random()*25) + "px";
-  heart.style.animationDuration = (5+Math.random()*6) + "s";
-  document.getElementById("hearts").appendChild(heart);
-  setTimeout(() => heart.remove(), 11000);
-}
-setInterval(createHearts, 500);
+function openLetter() {
+    const letter = document.getElementById("letter");
 
-// OPEN BIRTHDAY LETTER
-function showLetter() {
-  document.getElementById("letter").classList.toggle("hidden");
-  celebrate();
+    if (letter.style.display === "block") {
+        letter.style.display = "none";
+    } else {
+        letter.style.display = "block";
+        letter.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+        createConfetti();
+    }
 }
 
-// BIRTHDAY CONFETTI
-function celebrate() {
-  for(let i=0; i<100; i++) {
-    const item = document.createElement("div");
-    item.className = "confetti";
-    item.innerHTML = ["💙","🤍","✨","🎉","♡"][Math.floor(Math.random()*5)];
-    item.style.left = Math.random()*100 + "vw";
-    item.style.animationDelay = Math.random()*2 + "s";
-    item.style.fontSize = (12+Math.random()*20) + "px";
-    document.body.appendChild(item);
-    setTimeout(() => item.remove(), 6000);
-  }
-}
-
-// RSVP BUTTON
 function rsvp() {
-  document.getElementById("rsvpMessage").classList.remove("hidden");
-  celebrate();
+    document.getElementById("rsvpMessage").innerHTML =
+        "Yayyy! Can't wait to celebrate with you! 💙🤍";
+    createConfetti();
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = Math.random() > 0.5 ? "💙" : "🤍";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (15 + Math.random() * 25) + "px";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 10000);
+}
+
+setInterval(createHeart, 500);
+
+function createConfetti() {
+    const symbols = ["💙", "🤍", "✨", "🎉"];
+
+    for (let i = 0; i < 35; i++) {
+        const confetti = document.createElement("div");
+
+        confetti.innerHTML =
+            symbols[Math.floor(Math.random() * symbols.length)];
+
+        confetti.style.position = "fixed";
+        confetti.style.left = Math.random() * 100 + "vw";
+        confetti.style.top = "-30px";
+        confetti.style.fontSize = "22px";
+        confetti.style.zIndex = "999";
+        confetti.style.pointerEvents = "none";
+
+        document.body.appendChild(confetti);
+
+        const duration = 2000 + Math.random() * 2500;
+
+        confetti.animate([
+            { transform: "translateY(0) rotate(0deg)", opacity: 1 },
+            {
+                transform: "translateY(100vh) rotate(720deg)",
+                opacity: 0
+            }
+        ], {
+            duration: duration,
+            easing: "ease-in"
+        });
+
+        setTimeout(() => confetti.remove(), duration);
+    }
 }
 </script>
 
