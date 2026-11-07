@@ -94,6 +94,91 @@ button:hover {
     animation: bounce 2s infinite;
 }
 
+/* MUSIC */
+
+.music-section {
+    background: linear-gradient(135deg, #e5f3ff, #ffffff);
+}
+
+.music-caption {
+    font-size: 1.15rem;
+    font-style: italic;
+    color: #557b9f;
+    margin-top: -10px;
+    margin-bottom: 25px;
+}
+
+.music-box {
+    max-width: 650px;
+    margin: 25px auto;
+    padding: 20px;
+    border-radius: 22px;
+    background: white;
+    box-shadow: 0 8px 25px #659acb30;
+}
+
+.music-box iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: none;
+    border-radius: 15px;
+}
+
+.music-note {
+    font-size: 0.95rem;
+    margin-top: 12px;
+    color: #557b9f;
+}
+
+.youtube-link {
+    display: inline-block;
+    background: #438bc7;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+/* CARDS */
+
+.card {
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 35px 25px;
+    background: #ffffffed;
+    border: 1px solid #c6e3ff;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px #659acb30;
+}
+
+/* LETTER */
+
+.letter {
+    display: none;
+    text-align: left;
+    animation: appear 1s ease;
+    margin-top: 20px;
+}
+
+.letter p {
+    margin-bottom: 15px;
+}
+
+/* INVITATION */
+
+.invitation {
+    background: linear-gradient(135deg, #eaf6ff, #ffffff);
+}
+
+.invite-details {
+    margin: 20px 0;
+    line-height: 2.2;
+    font-size: 1.1rem;
+}
+
 /* COUNTDOWN */
 
 .countdown-section {
@@ -128,72 +213,6 @@ button:hover {
     color: #527b9e;
     font-weight: bold;
     font-size: 0.7rem;
-}
-
-/* CARDS */
-
-.card {
-    max-width: 700px;
-    margin: 25px auto;
-    padding: 35px 25px;
-    background: #ffffffed;
-    border: 1px solid #c6e3ff;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px #659acb30;
-}
-
-/* LETTER */
-
-.letter {
-    display: none;
-    text-align: left;
-    animation: appear 1s ease;
-    margin-top: 20px;
-}
-
-.letter p {
-    margin-bottom: 15px;
-}
-
-/* MUSIC */
-
-.music-section {
-    background: linear-gradient(135deg, #e5f3ff, #ffffff);
-}
-
-.music-box {
-    max-width: 650px;
-    margin: 25px auto;
-    padding: 20px;
-    border-radius: 22px;
-    background: white;
-    box-shadow: 0 8px 25px #659acb30;
-}
-
-.music-box iframe {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    height: auto;
-    border: none;
-    border-radius: 15px;
-}
-
-.music-note {
-    font-size: 0.95rem;
-    margin-top: 12px;
-    color: #557b9f;
-}
-
-/* INVITATION */
-
-.invitation {
-    background: linear-gradient(135deg, #eaf6ff, #ffffff);
-}
-
-.invite-details {
-    margin: 20px 0;
-    line-height: 2.2;
-    font-size: 1.1rem;
 }
 
 /* FINAL MESSAGE */
@@ -285,7 +304,7 @@ footer {
 
 <body>
 
-<!-- HERO / HOMEPAGE -->
+<!-- BIRTHDAY GREETING -->
 
 <section class="hero">
 
@@ -308,41 +327,40 @@ footer {
 </section>
 
 
-<!-- LIVE COUNTDOWN -->
+<!-- SONG SECTION: ABOVE EVERYTHING ELSE -->
 
-<section class="countdown-section">
+<section class="music-section">
 
-    <h2>⏳ The Countdown Begins!</h2>
+    <h2>🎵 A Song For You</h2>
 
-    <p>Until Adib's special day 💙</p>
+    <p class="music-caption">"Songs describe us" 💙</p>
 
-    <div class="countdown-container">
+    <div class="music-box">
 
-        <div class="time-box">
-            <span id="days">00</span>
-            <small>DAYS</small>
-        </div>
+        <iframe
+            src="https://www.youtube.com/embed/lD2cxb184OE?playsinline=1&rel=0"
+            title="A Song For Us"
+            width="100%"
+            height="315"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+        </iframe>
 
-        <div class="time-box">
-            <span id="hours">00</span>
-            <small>HOURS</small>
-        </div>
+        <p class="music-note">
+            A song that reminds me of us. 🤍
+        </p>
 
-        <div class="time-box">
-            <span id="minutes">00</span>
-            <small>MINUTES</small>
-        </div>
-
-        <div class="time-box">
-            <span id="seconds">00</span>
-            <small>SECONDS</small>
-        </div>
+        <a
+            href="https://www.youtube.com/watch?v=lD2cxb184OE"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="youtube-link">
+            ▶ Watch on YouTube
+        </a>
 
     </div>
-
-    <h3>15 NOVEMBER 2026 · 8:00 AM</h3>
-
-    <p>💙 Every second brings us closer!</p>
 
 </section>
 
@@ -381,6 +399,13 @@ footer {
             </p>
 
             <p>
+                Thank you for choosing to live this life,
+                even during the moments when you feel like giving up.
+                I hope you always remember that your existence matters
+                and that there is still so much happiness waiting for you.
+            </p>
+
+            <p>
                 I hope all your dreams come true and that you always
                 find reasons to smile. May this new chapter bring
                 you success, good health and everything your heart wishes for.
@@ -401,35 +426,6 @@ footer {
             </p>
 
         </div>
-
-    </div>
-
-</section>
-
-
-<!-- MUSIC -->
-
-<section class="music-section">
-
-    <h2>🎵 A Song For You</h2>
-
-    <p>
-        A little song to make your special day even more meaningful.
-    </p>
-
-    <div class="music-box">
-
-        <iframe
-            src="https://www.youtube.com/embed/lD2cxb184OE?si=7gE8RVkztY1lMg2V"
-            title="A Birthday Song For You"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-        </iframe>
-
-        <p class="music-note">
-            Press Play and enjoy your special song. 🎧
-        </p>
 
     </div>
 
@@ -481,6 +477,45 @@ footer {
 </section>
 
 
+<!-- COUNTDOWN AFTER INVITATION -->
+
+<section class="countdown-section">
+
+    <h2>⏳ The Countdown Begins!</h2>
+
+    <p>Until Adib's special day 💙</p>
+
+    <div class="countdown-container">
+
+        <div class="time-box">
+            <span id="days">00</span>
+            <small>DAYS</small>
+        </div>
+
+        <div class="time-box">
+            <span id="hours">00</span>
+            <small>HOURS</small>
+        </div>
+
+        <div class="time-box">
+            <span id="minutes">00</span>
+            <small>MINUTES</small>
+        </div>
+
+        <div class="time-box">
+            <span id="seconds">00</span>
+            <small>SECONDS</small>
+        </div>
+
+    </div>
+
+    <h3>15 NOVEMBER 2026 · 8:00 AM</h3>
+
+    <p>💙 Every second brings us closer!</p>
+
+</section>
+
+
 <!-- FINAL MESSAGE -->
 
 <section class="final-message">
@@ -514,14 +549,10 @@ footer {
 <!-- FOOTER -->
 
 <footer>
-
     Made with love, just for you. 💙<br>
     © 2026 | A Special Birthday Surprise
-
 </footer>
 
-
-<!-- JAVASCRIPT -->
 
 <script>
 
@@ -532,8 +563,7 @@ const birthdayDate =
 
 function updateCountdown() {
 
-    const now = Date.now();
-    const distance = birthdayDate - now;
+    const distance = birthdayDate - Date.now();
 
     if (distance <= 0) {
 
@@ -575,7 +605,6 @@ function updateCountdown() {
 
     document.getElementById("seconds").innerHTML =
         String(seconds).padStart(2, "0");
-
 }
 
 updateCountdown();
@@ -602,9 +631,7 @@ function openLetter() {
         });
 
         createConfetti();
-
     }
-
 }
 
 
@@ -616,7 +643,6 @@ function rsvp() {
         "Yayyy! Can't wait to celebrate with you! 💙🤍";
 
     createConfetti();
-
 }
 
 
@@ -642,10 +668,7 @@ function createHeart() {
 
     document.body.appendChild(heart);
 
-    setTimeout(() => {
-        heart.remove();
-    }, 10000);
-
+    setTimeout(() => heart.remove(), 10000);
 }
 
 setInterval(createHeart, 500);
@@ -692,12 +715,8 @@ function createConfetti() {
             }
         );
 
-        setTimeout(() => {
-            confetti.remove();
-        }, duration);
-
+        setTimeout(() => confetti.remove(), duration);
     }
-
 }
 
 </script>
