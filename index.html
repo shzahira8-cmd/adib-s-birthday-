@@ -4,719 +4,897 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Adib 💙</title>
+<meta name="theme-color" content="#dcecff">
+<title>A Special Birthday Surprise 💙</title>
 
 <style>
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Georgia, serif;
-    background: linear-gradient(135deg, #e6f4ff, #ffffff, #c3e1ff);
-    color: #24496f;
-    text-align: center;
-    overflow-x: hidden;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #dcecff, #f5f9ff, #c4ddf7);
+  color: #31577e;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-section {
-    padding: 65px 20px;
-    position: relative;
+.page {
+  display: none;
+  min-height: 100vh;
+  padding: 35px 18px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 760px;
+  margin: auto;
+  padding: 35px 25px;
+  border-radius: 28px;
+  background: rgba(255,255,255,0.77);
+  box-shadow: 0 12px 45px rgba(63, 112, 163, 0.15);
+  position: relative;
+  z-index: 2;
 }
 
 h1 {
-    font-size: clamp(2.8rem, 9vw, 5rem);
-    color: #28649b;
-    margin-bottom: 18px;
-    animation: glow 2s infinite alternate;
+  color: #285b91;
+  font-size: clamp(2rem, 6vw, 3.3rem);
+  margin: 15px 0;
 }
 
 h2 {
-    color: #28649b;
-    font-size: 2rem;
-    margin-bottom: 22px;
-}
-
-h3 {
-    color: #28649b;
-    margin: 18px 0;
+  color: #477cac;
+  margin-bottom: 16px;
 }
 
 p {
-    line-height: 1.8;
-    font-size: 1.05rem;
+  line-height: 1.8;
 }
 
-button {
-    border: none;
-    background: #438bc7;
-    color: white;
-    padding: 14px 27px;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin: 12px;
-    transition: 0.3s;
-    box-shadow: 0 5px 15px #7daed080;
+.small-title {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #6b91b9;
 }
 
-button:hover {
-    background: #245e91;
-    transform: scale(1.06);
+.heart {
+  color: #6b9ed0;
+  font-size: 28px;
+  animation: heartbeat 1.5s infinite;
 }
 
-/* HERO */
-
-.hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(145deg, #d8efff, #ffffff, #a9d4ff);
-    padding: 40px 20px;
+@keyframes heartbeat {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
 }
 
-.subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+/* Invitation */
+
+.invitation-details {
+  margin: 25px 0;
+  padding: 20px;
+  border-radius: 20px;
+  background: #edf5ff;
+  line-height: 2;
 }
 
-.cake {
-    font-size: 90px;
-    margin: 25px;
-    animation: bounce 2s infinite;
+.invitation-details strong {
+  color: #285b91;
 }
 
-/* MUSIC */
-
-.music-section {
-    background: linear-gradient(135deg, #e5f3ff, #ffffff);
+.route {
+  font-size: 17px;
+  font-weight: bold;
+  color: #477cac;
+  margin: 8px 0;
 }
-
-.music-caption {
-    font-size: 1.15rem;
-    font-style: italic;
-    color: #557b9f;
-    margin-top: -10px;
-    margin-bottom: 25px;
-}
-
-.music-box {
-    max-width: 650px;
-    margin: 25px auto;
-    padding: 20px;
-    border-radius: 22px;
-    background: white;
-    box-shadow: 0 8px 25px #659acb30;
-}
-
-.music-box iframe {
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    height: auto;
-    border: none;
-    border-radius: 15px;
-}
-
-.music-note {
-    font-size: 0.95rem;
-    margin-top: 12px;
-    color: #557b9f;
-}
-
-.youtube-link {
-    display: inline-block;
-    background: #438bc7;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 25px;
-    text-decoration: none;
-    margin-top: 12px;
-}
-
-/* CARDS */
-
-.card {
-    max-width: 700px;
-    margin: 25px auto;
-    padding: 35px 25px;
-    background: #ffffffed;
-    border: 1px solid #c6e3ff;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px #659acb30;
-}
-
-/* LETTER */
-
-.letter {
-    display: none;
-    text-align: left;
-    animation: appear 1s ease;
-    margin-top: 20px;
-}
-
-.letter p {
-    margin-bottom: 15px;
-}
-
-/* INVITATION */
-
-.invitation {
-    background: linear-gradient(135deg, #eaf6ff, #ffffff);
-}
-
-.invite-details {
-    margin: 20px 0;
-    line-height: 2.2;
-    font-size: 1.1rem;
-}
-
-/* COUNTDOWN */
 
 .countdown-section {
-    background: linear-gradient(135deg, #d8efff, #ffffff);
+  margin: 28px 0;
 }
 
-.countdown-container {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin: 30px auto;
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 18px;
 }
 
 .time-box {
-    background: white;
-    padding: 20px 12px;
-    min-width: 85px;
-    border-radius: 18px;
-    box-shadow: 0 5px 18px #659acb30;
-    border: 1px solid #c6e3ff;
+  background: linear-gradient(145deg, #dcecff, #ffffff);
+  border: 1px solid #c8def4;
+  padding: 17px 5px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(62, 111, 158, 0.08);
 }
 
 .time-box span {
-    display: block;
-    font-size: 2.3rem;
-    font-weight: bold;
-    color: #28649b;
+  display: block;
+  font-size: clamp(1.5rem, 5vw, 2.3rem);
+  font-weight: bold;
+  color: #285b91;
 }
 
 .time-box small {
-    color: #527b9e;
-    font-weight: bold;
-    font-size: 0.7rem;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #6d91b4;
 }
 
-/* FINAL MESSAGE */
+#countdownMessage {
+  margin-top: 15px;
+  color: #285b91;
+  font-weight: bold;
+}
+
+/* Password */
+
+.password-area {
+  margin-top: 25px;
+  padding: 23px;
+  background: #f0f6ff;
+  border-radius: 20px;
+}
+
+.password-area input {
+  width: 100%;
+  max-width: 280px;
+  padding: 14px;
+  border: 2px solid #b6d1ec;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 5px;
+  outline: none;
+  margin: 15px 0;
+  color: #285b91;
+}
+
+.password-area input:focus {
+  border-color: #548dc5;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #6c9ed0, #3e75ad);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(54, 104, 155, 0.2);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(54, 104, 155, 0.3);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+#errorMessage {
+  color: #c45a72;
+  font-size: 14px;
+  margin-top: 12px;
+  min-height: 20px;
+}
+
+/* Page 2 */
+
+.song-section {
+  margin: 30px 0;
+}
+
+.video-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(54, 104, 155, 0.15);
+  background: #dcecff;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.song-caption {
+  margin-top: 15px;
+  font-style: italic;
+  color: #5987b3;
+  font-size: 17px;
+}
+
+.youtube-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #477cac;
+  font-size: 13px;
+}
+
+.letter {
+  background: #f1f7ff;
+  border: 1px solid #d4e5f7;
+  border-radius: 20px;
+  padding: 28px;
+  margin: 25px 0;
+  text-align: left;
+  line-height: 2;
+  white-space: pre-line;
+}
+
+.letter h2 {
+  text-align: center;
+}
+
+.cake {
+  font-size: 95px;
+  margin: 15px 0;
+  animation: cakeBounce 2s infinite ease-in-out;
+}
+
+@keyframes cakeBounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.wishes {
+  background: #edf5ff;
+  padding: 23px;
+  border-radius: 20px;
+  margin: 20px 0;
+  line-height: 2;
+}
 
 .final-message {
-    background: linear-gradient(135deg, #d8efff, #ffffff);
+  font-size: 19px;
+  color: #477cac;
+  margin: 25px 0;
+  font-style: italic;
 }
 
-/* FOOTER */
+/* Floating hearts */
 
-footer {
-    padding: 30px 15px;
-    background: #c8e5ff;
-    color: #245e91;
-    line-height: 1.8;
+.floating-heart {
+  position: fixed;
+  bottom: -40px;
+  color: rgba(80, 137, 193, 0.4);
+  font-size: 22px;
+  pointer-events: none;
+  z-index: 1;
+  animation: floatUp linear forwards;
 }
-
-/* FLOATING HEARTS */
-
-.heart {
-    position: fixed;
-    bottom: -30px;
-    color: #6da9df;
-    animation: floatUp linear forwards;
-    pointer-events: none;
-    z-index: 10;
-}
-
-/* ANIMATIONS */
 
 @keyframes floatUp {
-    to {
-        transform: translateY(-110vh) rotate(360deg);
-        opacity: 0;
-    }
+  from {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
 }
 
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
+/* Confetti */
+
+.confetti {
+  position: fixed;
+  top: -15px;
+  width: 9px;
+  height: 13px;
+  z-index: 10;
+  pointer-events: none;
+  animation: confettiFall linear forwards;
 }
 
-@keyframes glow {
-    from {
-        text-shadow: 0 0 5px #ffffff;
-    }
-    to {
-        text-shadow: 0 0 20px #75baff;
-    }
+@keyframes confettiFall {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
 }
 
-@keyframes appear {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.footer {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #7899b9;
 }
 
-/* MOBILE */
+@media(max-width: 450px) {
+  .container {
+    padding: 28px 17px;
+  }
 
-@media (max-width: 600px) {
-    section {
-        padding: 50px 15px;
-    }
+  .countdown {
+    gap: 6px;
+  }
 
-    .card {
-        padding: 25px 18px;
-    }
+  .time-box {
+    padding: 13px 3px;
+  }
 
-    .time-box {
-        min-width: 70px;
-        padding: 15px 8px;
-    }
+  .time-box small {
+    font-size: 8px;
+  }
 
-    .time-box span {
-        font-size: 1.8rem;
-    }
+  .letter {
+    padding: 20px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- BIRTHDAY GREETING -->
+<!-- FLOATING HEARTS -->
+<div id="hearts"></div>
 
-<section class="hero">
+<!-- PAGE 1: INVITATION -->
+<section id="page1" class="page active">
 
-    <p class="subtitle">A little surprise made with love...</p>
+  <div class="container">
+
+    <div class="heart">♡</div>
+
+    <p class="small-title">You are specially invited to</p>
+
+    <h1>A Special Day</h1>
+
+    <h2>For Muhammad Adib Adli 💙</h2>
+
+    <p>
+      Some days are more special than others.
+      And this day is all about celebrating YOU.
+    </p>
+
+    <div class="invitation-details">
+
+      <p>🎂 <strong>THE OCCASION</strong></p>
+      <p>Birthday Celebration</p>
+
+      <br>
+
+      <p>📅 <strong>THE DATE</strong></p>
+      <p>15 November 2026</p>
+
+      <p>⏰ <strong>THE TIME</strong></p>
+      <p>8:00 AM</p>
+
+      <br>
+
+      <p>📍 <strong>OUR JOURNEY</strong></p>
+      <div class="route">
+        Samarahan → Serian → Kuching
+      </div>
+
+      <br>
+
+      <p>👔 <strong>DRESS CODE</strong></p>
+      <p>Blue & White 💙🤍</p>
+
+    </div>
+
+    <!-- COUNTDOWN -->
+    <div class="countdown-section">
+
+      <h2>Countdown to Your Special Day</h2>
+
+      <p>Every second brings us closer to your day!</p>
+
+      <div class="countdown">
+
+        <div class="time-box">
+          <span id="days">00</span>
+          <small>DAYS</small>
+        </div>
+
+        <div class="time-box">
+          <span id="hours">00</span>
+          <small>HOURS</small>
+        </div>
+
+        <div class="time-box">
+          <span id="minutes">00</span>
+          <small>MINUTES</small>
+        </div>
+
+        <div class="time-box">
+          <span id="seconds">00</span>
+          <small>SECONDS</small>
+        </div>
+
+      </div>
+
+      <p id="countdownMessage">
+        Counting down to a beautiful day 💙
+      </p>
+
+    </div>
+
+    <!-- PASSWORD -->
+    <div class="password-area">
+
+      <h2>🔐 A Little Secret</h2>
+
+      <p>
+        There is something waiting for you.
+        Enter the secret code to discover your surprise.
+      </p>
+
+      <input
+        type="password"
+        id="secretCode"
+        placeholder="Enter secret code"
+        maxlength="6"
+        inputmode="numeric"
+        autocomplete="off"
+      >
+
+      <br>
+
+      <button onclick="checkPassword()">
+        Unlock Your Surprise 💙
+      </button>
+
+      <p id="errorMessage"></p>
+
+    </div>
+
+    <div class="footer">
+      Made with love, just for you ♡
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PAGE 2: BIRTHDAY SURPRISE -->
+<section id="page2" class="page">
+
+  <div class="container">
+
+    <div class="heart">♡ ♡ ♡</div>
+
+    <p class="small-title">The moment you've been waiting for</p>
 
     <h1>Happy Birthday!</h1>
 
     <h2>Dear Muhammad Adib Adli 💙</h2>
 
-    <p>
-        Today is all about celebrating you.<br>
-        Someone special deserves a day full of happiness,
-        laughter and beautiful memories.
-    </p>
-
     <div class="cake">🎂</div>
 
-    <p>Scroll down, because I have something special for you!</p>
+    <p>
+      Today is all about celebrating your existence.
+      I hope your day is filled with happiness,
+      laughter and beautiful memories.
+    </p>
 
-</section>
+    <!-- SONG -->
+    <div class="song-section">
 
+      <h2>🎵 A Song for Us</h2>
 
-<!-- SONG SECTION: ABOVE EVERYTHING ELSE -->
-
-<section class="music-section">
-
-    <h2>🎵 A Song For You</h2>
-
-    <p class="music-caption">"Songs describe us" 💙</p>
-
-    <div class="music-box">
+      <div class="video-container">
 
         <iframe
-            src="https://www.youtube.com/embed/lD2cxb184OE?playsinline=1&rel=0"
-            title="A Song For Us"
-            width="100%"
-            height="315"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
+          src="https://www.youtube.com/embed/lD2cxb184OE?si=7gE8RVkztY1lMg2V"
+          title="A song for us"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
         </iframe>
 
-        <p class="music-note">
-            A song that reminds me of us. 🤍
-        </p>
+      </div>
 
-        <a
-            href="https://www.youtube.com/watch?v=lD2cxb184OE"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="youtube-link">
-            ▶ Watch on YouTube
-        </a>
+      <p class="song-caption">songs describe us ♡</p>
 
-    </div>
-
-</section>
-
-
-<!-- SPECIAL LETTER -->
-
-<section>
-
-    <h2>💌 A Letter For You</h2>
-
-    <div class="card">
-
-        <p>
-            I have something I want you to read.
-            Every word comes straight from my heart.
-        </p>
-
-        <button onclick="openLetter()">
-            Open Your Special Letter 💙
-        </button>
-
-        <div class="letter" id="letter">
-
-            <p>Dear Adib,</p>
-
-            <p>
-                Happy Birthday to someone who means so much to me.
-                I hope this special day brings you endless happiness,
-                love and beautiful memories.
-            </p>
-
-            <p>
-                Thank you for being part of my life.
-                I am grateful for every laugh, every little moment
-                and every memory we have created together.
-            </p>
-
-            <p>
-                Thank you for choosing to live this life,
-                even during the moments when you feel like giving up.
-                I hope you always remember that your existence matters
-                and that there is still so much happiness waiting for you.
-            </p>
-
-            <p>
-                I hope all your dreams come true and that you always
-                find reasons to smile. May this new chapter bring
-                you success, good health and everything your heart wishes for.
-            </p>
-
-            <p>
-                No matter how busy life gets, I hope we continue
-                creating beautiful memories together.
-            </p>
-
-            <p>
-                Once again, happy birthday, my favourite person. 🤍
-            </p>
-
-            <p style="text-align:right;">
-                With love,<br>
-                Someone who cares about you so much 💙
-            </p>
-
-        </div>
+      <a
+        class="youtube-link"
+        href="https://www.youtube.com/watch?v=lD2cxb184OE"
+        target="_blank"
+        rel="noopener">
+        Watch on YouTube
+      </a>
 
     </div>
 
-</section>
+    <!-- LETTER -->
+    <div class="letter">
 
+      <h2>💌 A Letter for You</h2>
 
-<!-- BIRTHDAY INVITATION -->
+      Happy Birthday, Adib! ♡
 
-<section class="invitation">
+      First of all, I want to say thank you for being part of my life.
+      I am grateful for every memory, every laugh, every conversation
+      and every little moment we have shared.
 
-    <h2>💙 You're Invited! 🤍</h2>
+      I hope you know how special you are.
+      You deserve all the happiness, love and beautiful things
+      that life has to offer.
 
-    <div class="card">
+      Thank you for choosing to live this life,
+      even during the moments when you feel like giving up.
+      I hope you always remember that your existence matters
+      and that there is still so much happiness waiting for you.
 
-        <h2>A Special Birthday Celebration</h2>
+      May this new chapter bring you good health,
+      endless happiness, success and strength to achieve
+      everything you dream of.
 
-        <p>
-            Because your birthday deserves to be celebrated
-            with beautiful memories and happy moments.
-        </p>
+      I hope we continue creating beautiful memories
+      together and enjoying all the little things in life.
 
-        <div class="invite-details">
+      Always remember that you are appreciated,
+      valued and cared for.
 
-            <p>📅 <strong>Date:</strong> 15 November 2026</p>
+      <br>
 
-            <p>⏰ <strong>Time:</strong> 8:00 AM</p>
-
-            <p>📍 <strong>Journey:</strong></p>
-
-            <p>Samarahan → Serian → Kuching</p>
-
-            <p>👔 <strong>Dress Code:</strong> Blue & White</p>
-
-        </div>
-
-        <p>
-            Get ready for a day filled with fun,
-            laughter and unforgettable memories!
-        </p>
-
-        <button onclick="rsvp()">
-            Yes! I'm Ready! 💙
-        </button>
-
-        <p id="rsvpMessage"></p>
+      With love,
+      Someone who cares about you so much 💙
 
     </div>
 
-</section>
+    <!-- BIRTHDAY WISHES -->
+    <div class="wishes">
 
+      <h2>✨ My Wishes for You</h2>
 
-<!-- COUNTDOWN AFTER INVITATION -->
-
-<section class="countdown-section">
-
-    <h2>⏳ The Countdown Begins!</h2>
-
-    <p>Until Adib's special day 💙</p>
-
-    <div class="countdown-container">
-
-        <div class="time-box">
-            <span id="days">00</span>
-            <small>DAYS</small>
-        </div>
-
-        <div class="time-box">
-            <span id="hours">00</span>
-            <small>HOURS</small>
-        </div>
-
-        <div class="time-box">
-            <span id="minutes">00</span>
-            <small>MINUTES</small>
-        </div>
-
-        <div class="time-box">
-            <span id="seconds">00</span>
-            <small>SECONDS</small>
-        </div>
+      <p>💙 May happiness always find you.</p>
+      <p>🤍 May your dreams become reality.</p>
+      <p>💙 May you always be surrounded by love.</p>
+      <p>🤍 May you have strength through difficult days.</p>
+      <p>💙 May your future be brighter than ever.</p>
 
     </div>
 
-    <h3>15 NOVEMBER 2026 · 8:00 AM</h3>
-
-    <p>💙 Every second brings us closer!</p>
-
-</section>
-
-
-<!-- FINAL MESSAGE -->
-
-<section class="final-message">
-
-    <h2>One Last Thing...</h2>
-
-    <div class="card">
-
-        <p style="font-size:1.2rem;">
-            I hope this little website makes you smile.
-        </p>
-
-        <p style="margin-top:15px;">
-            You deserve all the happiness in the world.
-            Enjoy your special day, Adib!
-        </p>
-
-        <div style="font-size:45px; margin-top:20px;">
-            💙🤍🎂
-        </div>
-
-        <h2 style="margin-top:20px;">
-            Happy Birthday Once Again!
-        </h2>
-
+    <div class="final-message">
+      "You deserve to be celebrated, today and every day." ♡
     </div>
 
+    <h1>Happy Birthday, Adib! 🎂</h1>
+
+    <p>
+      Here's to another year of beautiful memories.
+    </p>
+
+    <br>
+
+    <button onclick="celebrateAgain()">
+      Celebrate Again 🎉
+    </button>
+
+    <br><br>
+
+    <button onclick="goBack()" style="background:#8aaaca;">
+      ← Back to Invitation
+    </button>
+
+    <div class="footer">
+      Forever a special day to remember 💙
+    </div>
+
+  </div>
+
 </section>
-
-
-<!-- FOOTER -->
-
-<footer>
-    Made with love, just for you. 💙<br>
-    © 2026 | A Special Birthday Surprise
-</footer>
 
 
 <script>
 
-// COUNTDOWN - MALAYSIA TIME (UTC+8)
+// ====================================
+// SETTINGS
+// ====================================
 
-const birthdayDate =
-    new Date("2026-11-15T08:00:00+08:00").getTime();
+// Secret password
+const SECRET_PASSWORD = "151175";
+
+// Birthday date: 15 November 2026, 8:00 AM Malaysia time
+const birthdayDate = new Date(
+  "2026-11-15T08:00:00+08:00"
+).getTime();
+
+
+// ====================================
+// COUNTDOWN
+// ====================================
+
+let bellHasRung = false;
+let audioContext = null;
 
 function updateCountdown() {
 
-    const distance = birthdayDate - Date.now();
+  const now = Date.now();
+  const distance = birthdayDate - now;
 
-    if (distance <= 0) {
+  if (distance <= 0) {
 
-        document.getElementById("days").innerHTML = "00";
-        document.getElementById("hours").innerHTML = "00";
-        document.getElementById("minutes").innerHTML = "00";
-        document.getElementById("seconds").innerHTML = "00";
+    document.getElementById("days").textContent = "00";
+    document.getElementById("hours").textContent = "00";
+    document.getElementById("minutes").textContent = "00";
+    document.getElementById("seconds").textContent = "00";
 
-        document.querySelector(".countdown-section h2").innerHTML =
-            "🎉 HAPPY BIRTHDAY ADIB! 🎂💙";
+    document.getElementById("countdownMessage").textContent =
+      "🎉 IT'S YOUR BIRTHDAY! HAPPY BIRTHDAY, ADIB! 💙";
 
-        return;
+    // Ring once when countdown reaches zero.
+    // If website is opened after the deadline, it also rings.
+    if (!bellHasRung) {
+      bellHasRung = true;
+      ringBirthdayBell();
+      launchConfetti();
     }
 
-    const days = Math.floor(
-        distance / (1000 * 60 * 60 * 24)
-    );
+    return;
+  }
 
-    const hours = Math.floor(
-        (distance / (1000 * 60 * 60)) % 24
-    );
+  const days = Math.floor(
+    distance / (1000 * 60 * 60 * 24)
+  );
 
-    const minutes = Math.floor(
-        (distance / (1000 * 60)) % 60
-    );
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) /
+    (1000 * 60 * 60)
+  );
 
-    const seconds = Math.floor(
-        (distance / 1000) % 60
-    );
+  const minutes = Math.floor(
+    (distance % (1000 * 60 * 60)) /
+    (1000 * 60)
+  );
 
-    document.getElementById("days").innerHTML =
-        String(days).padStart(2, "0");
+  const seconds = Math.floor(
+    (distance % (1000 * 60)) / 1000
+  );
 
-    document.getElementById("hours").innerHTML =
-        String(hours).padStart(2, "0");
+  document.getElementById("days").textContent =
+    String(days).padStart(2, "0");
 
-    document.getElementById("minutes").innerHTML =
-        String(minutes).padStart(2, "0");
+  document.getElementById("hours").textContent =
+    String(hours).padStart(2, "0");
 
-    document.getElementById("seconds").innerHTML =
-        String(seconds).padStart(2, "0");
+  document.getElementById("minutes").textContent =
+    String(minutes).padStart(2, "0");
+
+  document.getElementById("seconds").textContent =
+    String(seconds).padStart(2, "0");
+
 }
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
 
-// OPEN / CLOSE LETTER
+// ====================================
+// BIRTHDAY BELL SOUND
+// ====================================
 
-function openLetter() {
+function ringBirthdayBell() {
 
-    const letter = document.getElementById("letter");
+  try {
 
-    if (letter.style.display === "block") {
+    const AudioContextClass =
+      window.AudioContext || window.webkitAudioContext;
 
-        letter.style.display = "none";
+    if (!AudioContextClass) return;
 
-    } else {
-
-        letter.style.display = "block";
-
-        letter.scrollIntoView({
-            behavior: "smooth",
-            block: "center"
-        });
-
-        createConfetti();
+    if (!audioContext) {
+      audioContext = new AudioContextClass();
     }
+
+    if (audioContext.state === "suspended") {
+      audioContext.resume();
+    }
+
+    const notes = [880, 1046.5, 1318.5, 1046.5];
+
+    notes.forEach((frequency, index) => {
+
+      const oscillator = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+
+      oscillator.type = "sine";
+      oscillator.frequency.value = frequency;
+
+      const startTime = audioContext.currentTime + index * 0.38;
+
+      gain.gain.setValueAtTime(0.0001, startTime);
+      gain.gain.exponentialRampToValueAtTime(
+        0.25,
+        startTime + 0.03
+      );
+
+      gain.gain.exponentialRampToValueAtTime(
+        0.0001,
+        startTime + 0.65
+      );
+
+      oscillator.connect(gain);
+      gain.connect(audioContext.destination);
+
+      oscillator.start(startTime);
+      oscillator.stop(startTime + 0.7);
+
+    });
+
+  } catch (error) {
+    console.log("Bell sound could not play:", error);
+  }
+
 }
 
 
-// RSVP BUTTON
+// ====================================
+// PASSWORD SYSTEM
+// ====================================
 
-function rsvp() {
+function checkPassword() {
 
-    document.getElementById("rsvpMessage").innerHTML =
-        "Yayyy! Can't wait to celebrate with you! 💙🤍";
+  const enteredPassword =
+    document.getElementById("secretCode").value.trim();
 
-    createConfetti();
+  const errorMessage =
+    document.getElementById("errorMessage");
+
+  // Enable audio after user interaction.
+  try {
+    const AudioContextClass =
+      window.AudioContext || window.webkitAudioContext;
+
+    if (AudioContextClass && !audioContext) {
+      audioContext = new AudioContextClass();
+    }
+
+    if (audioContext && audioContext.state === "suspended") {
+      audioContext.resume();
+    }
+  } catch (error) {
+    console.log(error);
+  }
+
+  if (enteredPassword === SECRET_PASSWORD) {
+
+    errorMessage.textContent = "";
+
+    document.getElementById("page1").classList.remove("active");
+    document.getElementById("page2").classList.add("active");
+
+    window.scrollTo(0, 0);
+
+    launchConfetti();
+
+  } else {
+
+    errorMessage.textContent =
+      "Oops! That's not the correct code. Try again 💙";
+
+    document.getElementById("secretCode").value = "";
+    document.getElementById("secretCode").focus();
+
+  }
+
 }
 
 
+// Allow Enter key to submit password
+document.getElementById("secretCode").addEventListener(
+  "keydown",
+  function(event) {
+    if (event.key === "Enter") {
+      checkPassword();
+    }
+  }
+);
+
+
+// ====================================
+// BACK TO INVITATION
+// ====================================
+
+function goBack() {
+
+  document.getElementById("page2").classList.remove("active");
+  document.getElementById("page1").classList.add("active");
+
+  window.scrollTo(0, 0);
+
+}
+
+
+// ====================================
+// CONFETTI
+// ====================================
+
+function launchConfetti() {
+
+  const colors = [
+    "#83b5e5",
+    "#b4d6f5",
+    "#ffffff",
+    "#5b91c4",
+    "#d1e5fa"
+  ];
+
+  for (let i = 0; i < 100; i++) {
+
+    const piece = document.createElement("div");
+
+    piece.className = "confetti";
+
+    piece.style.left = Math.random() * 100 + "vw";
+    piece.style.backgroundColor =
+      colors[Math.floor(Math.random() * colors.length)];
+
+    piece.style.animationDuration =
+      (Math.random() * 3 + 2) + "s";
+
+    piece.style.animationDelay =
+      Math.random() * 1.5 + "s";
+
+    document.body.appendChild(piece);
+
+    setTimeout(() => piece.remove(), 6500);
+
+  }
+
+}
+
+
+// ====================================
 // FLOATING HEARTS
+// ====================================
 
 function createHeart() {
 
-    const heart = document.createElement("div");
+  const heart = document.createElement("div");
 
-    heart.className = "heart";
+  heart.className = "floating-heart";
+  heart.textContent = Math.random() > 0.5 ? "♡" : "♥";
 
-    heart.innerHTML =
-        Math.random() > 0.5 ? "💙" : "🤍";
+  heart.style.left = Math.random() * 100 + "vw";
 
-    heart.style.left =
-        Math.random() * 100 + "vw";
+  heart.style.fontSize =
+    (Math.random() * 20 + 15) + "px";
 
-    heart.style.fontSize =
-        (15 + Math.random() * 25) + "px";
+  heart.style.animationDuration =
+    (Math.random() * 5 + 6) + "s";
 
-    heart.style.animationDuration =
-        (5 + Math.random() * 5) + "s";
+  document.body.appendChild(heart);
 
-    document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 11000);
 
-    setTimeout(() => heart.remove(), 10000);
 }
 
-setInterval(createHeart, 500);
+setInterval(createHeart, 850);
 
 
-// CONFETTI ANIMATION
+// ====================================
+// CELEBRATE AGAIN
+// ====================================
 
-function createConfetti() {
-
-    const symbols = ["💙", "🤍", "✨", "🎉"];
-
-    for (let i = 0; i < 35; i++) {
-
-        const confetti = document.createElement("div");
-
-        confetti.innerHTML =
-            symbols[Math.floor(Math.random() * symbols.length)];
-
-        confetti.style.position = "fixed";
-        confetti.style.left = Math.random() * 100 + "vw";
-        confetti.style.top = "-30px";
-        confetti.style.fontSize = "22px";
-        confetti.style.zIndex = "999";
-        confetti.style.pointerEvents = "none";
-
-        document.body.appendChild(confetti);
-
-        const duration = 2000 + Math.random() * 2500;
-
-        confetti.animate(
-            [
-                {
-                    transform: "translateY(0) rotate(0deg)",
-                    opacity: 1
-                },
-                {
-                    transform: "translateY(100vh) rotate(720deg)",
-                    opacity: 0
-                }
-            ],
-            {
-                duration: duration,
-                easing: "ease-in"
-            }
-        );
-
-        setTimeout(() => confetti.remove(), duration);
-    }
+function celebrateAgain() {
+  launchConfetti();
+  ringBirthdayBell();
 }
 
 </script>
