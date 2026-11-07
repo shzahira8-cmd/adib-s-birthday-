@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday, Adib! 💙</title>
+<title>Happy Birthday Adib 💙</title>
 
 <style>
 * {
@@ -13,9 +13,13 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Georgia', serif;
-    background: linear-gradient(135deg, #dff3ff, #ffffff, #b9dcff);
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #e6f4ff, #ffffff, #c3e1ff);
     color: #24496f;
     text-align: center;
     overflow-x: hidden;
@@ -26,17 +30,8 @@ section {
     position: relative;
 }
 
-.hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(145deg, #d8efff, #ffffff, #a9d4ff);
-}
-
 h1 {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-size: clamp(2.8rem, 9vw, 5rem);
     color: #28649b;
     margin-bottom: 18px;
     animation: glow 2s infinite alternate;
@@ -48,14 +43,14 @@ h2 {
     margin-bottom: 22px;
 }
 
+h3 {
+    color: #28649b;
+    margin: 18px 0;
+}
+
 p {
     line-height: 1.8;
     font-size: 1.05rem;
-}
-
-.subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
 }
 
 button {
@@ -76,40 +71,94 @@ button:hover {
     transform: scale(1.06);
 }
 
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, #d8efff, #ffffff, #a9d4ff);
+    padding: 40px 20px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cake {
+    font-size: 90px;
+    margin: 25px;
+    animation: bounce 2s infinite;
+}
+
+/* COUNTDOWN */
+
+.countdown-section {
+    background: linear-gradient(135deg, #d8efff, #ffffff);
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 30px auto;
+}
+
+.time-box {
+    background: white;
+    padding: 20px 12px;
+    min-width: 85px;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px #659acb30;
+    border: 1px solid #c6e3ff;
+}
+
+.time-box span {
+    display: block;
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #28649b;
+}
+
+.time-box small {
+    color: #527b9e;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+/* CARDS */
+
 .card {
     max-width: 700px;
     margin: 25px auto;
     padding: 35px 25px;
-    background: #ffffffd9;
+    background: #ffffffed;
     border: 1px solid #c6e3ff;
     border-radius: 25px;
     box-shadow: 0 10px 30px #659acb30;
 }
 
+/* LETTER */
+
 .letter {
     display: none;
     text-align: left;
     animation: appear 1s ease;
+    margin-top: 20px;
 }
 
 .letter p {
     margin-bottom: 15px;
 }
 
-.cake {
-    font-size: 90px;
-    margin: 20px;
-    animation: bounce 2s infinite;
-}
+/* MUSIC */
 
-.invitation {
-    background: linear-gradient(135deg, #eaf6ff, #ffffff);
-}
-
-.invite-details {
-    margin: 20px 0;
-    line-height: 2.2;
-    font-size: 1.1rem;
+.music-section {
+    background: linear-gradient(135deg, #e5f3ff, #ffffff);
 }
 
 .music-box {
@@ -135,20 +184,45 @@ button:hover {
     color: #557b9f;
 }
 
+/* INVITATION */
+
+.invitation {
+    background: linear-gradient(135deg, #eaf6ff, #ffffff);
+}
+
+.invite-details {
+    margin: 20px 0;
+    line-height: 2.2;
+    font-size: 1.1rem;
+}
+
+/* FINAL MESSAGE */
+
+.final-message {
+    background: linear-gradient(135deg, #d8efff, #ffffff);
+}
+
+/* FOOTER */
+
 footer {
     padding: 30px 15px;
     background: #c8e5ff;
     color: #245e91;
+    line-height: 1.8;
 }
+
+/* FLOATING HEARTS */
 
 .heart {
     position: fixed;
     bottom: -30px;
     color: #6da9df;
-    animation: floatUp linear infinite;
+    animation: floatUp linear forwards;
     pointer-events: none;
     z-index: 10;
 }
+
+/* ANIMATIONS */
 
 @keyframes floatUp {
     to {
@@ -158,19 +232,35 @@ footer {
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 @keyframes glow {
-    from { text-shadow: 0 0 5px #ffffff; }
-    to { text-shadow: 0 0 20px #75baff; }
+    from {
+        text-shadow: 0 0 5px #ffffff;
+    }
+    to {
+        text-shadow: 0 0 20px #75baff;
+    }
 }
 
 @keyframes appear {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+/* MOBILE */
 
 @media (max-width: 600px) {
     section {
@@ -180,14 +270,25 @@ footer {
     .card {
         padding: 25px 18px;
     }
+
+    .time-box {
+        min-width: 70px;
+        padding: 15px 8px;
+    }
+
+    .time-box span {
+        font-size: 1.8rem;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HOME / BIRTHDAY GREETING -->
+<!-- HERO / HOMEPAGE -->
+
 <section class="hero">
+
     <p class="subtitle">A little surprise made with love...</p>
 
     <h1>Happy Birthday!</h1>
@@ -203,13 +304,57 @@ footer {
     <div class="cake">🎂</div>
 
     <p>Scroll down, because I have something special for you!</p>
+
 </section>
 
+
+<!-- LIVE COUNTDOWN -->
+
+<section class="countdown-section">
+
+    <h2>⏳ The Countdown Begins!</h2>
+
+    <p>Until Adib's special day 💙</p>
+
+    <div class="countdown-container">
+
+        <div class="time-box">
+            <span id="days">00</span>
+            <small>DAYS</small>
+        </div>
+
+        <div class="time-box">
+            <span id="hours">00</span>
+            <small>HOURS</small>
+        </div>
+
+        <div class="time-box">
+            <span id="minutes">00</span>
+            <small>MINUTES</small>
+        </div>
+
+        <div class="time-box">
+            <span id="seconds">00</span>
+            <small>SECONDS</small>
+        </div>
+
+    </div>
+
+    <h3>15 NOVEMBER 2026 · 8:00 AM</h3>
+
+    <p>💙 Every second brings us closer!</p>
+
+</section>
+
+
 <!-- SPECIAL LETTER -->
+
 <section>
+
     <h2>💌 A Letter For You</h2>
 
     <div class="card">
+
         <p>
             I have something I want you to read.
             Every word comes straight from my heart.
@@ -220,7 +365,7 @@ footer {
         </button>
 
         <div class="letter" id="letter">
-            <br>
+
             <p>Dear Adib,</p>
 
             <p>
@@ -254,12 +399,18 @@ footer {
                 With love,<br>
                 Someone who cares about you so much 💙
             </p>
+
         </div>
+
     </div>
+
 </section>
 
+
 <!-- MUSIC -->
-<section>
+
+<section class="music-section">
+
     <h2>🎵 A Song For You</h2>
 
     <p>
@@ -267,6 +418,7 @@ footer {
     </p>
 
     <div class="music-box">
+
         <iframe
             src="https://www.youtube.com/embed/lD2cxb184OE?si=7gE8RVkztY1lMg2V"
             title="A Birthday Song For You"
@@ -278,14 +430,20 @@ footer {
         <p class="music-note">
             Press Play and enjoy your special song. 🎧
         </p>
+
     </div>
+
 </section>
 
+
 <!-- BIRTHDAY INVITATION -->
+
 <section class="invitation">
+
     <h2>💙 You're Invited! 🤍</h2>
 
     <div class="card">
+
         <h2>A Special Birthday Celebration</h2>
 
         <p>
@@ -294,11 +452,17 @@ footer {
         </p>
 
         <div class="invite-details">
+
             <p>📅 <strong>Date:</strong> 15 November 2026</p>
+
             <p>⏰ <strong>Time:</strong> 8:00 AM</p>
+
             <p>📍 <strong>Journey:</strong></p>
+
             <p>Samarahan → Serian → Kuching</p>
+
             <p>👔 <strong>Dress Code:</strong> Blue & White</p>
+
         </div>
 
         <p>
@@ -311,14 +475,20 @@ footer {
         </button>
 
         <p id="rsvpMessage"></p>
+
     </div>
+
 </section>
 
+
 <!-- FINAL MESSAGE -->
-<section>
+
+<section class="final-message">
+
     <h2>One Last Thing...</h2>
 
     <div class="card">
+
         <p style="font-size:1.2rem;">
             I hope this little website makes you smile.
         </p>
@@ -335,58 +505,160 @@ footer {
         <h2 style="margin-top:20px;">
             Happy Birthday Once Again!
         </h2>
+
     </div>
+
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
+
     Made with love, just for you. 💙<br>
     © 2026 | A Special Birthday Surprise
+
 </footer>
 
+
+<!-- JAVASCRIPT -->
+
 <script>
+
+// COUNTDOWN - MALAYSIA TIME (UTC+8)
+
+const birthdayDate =
+    new Date("2026-11-15T08:00:00+08:00").getTime();
+
+function updateCountdown() {
+
+    const now = Date.now();
+    const distance = birthdayDate - now;
+
+    if (distance <= 0) {
+
+        document.getElementById("days").innerHTML = "00";
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("minutes").innerHTML = "00";
+        document.getElementById("seconds").innerHTML = "00";
+
+        document.querySelector(".countdown-section h2").innerHTML =
+            "🎉 HAPPY BIRTHDAY ADIB! 🎂💙";
+
+        return;
+    }
+
+    const days = Math.floor(
+        distance / (1000 * 60 * 60 * 24)
+    );
+
+    const hours = Math.floor(
+        (distance / (1000 * 60 * 60)) % 24
+    );
+
+    const minutes = Math.floor(
+        (distance / (1000 * 60)) % 60
+    );
+
+    const seconds = Math.floor(
+        (distance / 1000) % 60
+    );
+
+    document.getElementById("days").innerHTML =
+        String(days).padStart(2, "0");
+
+    document.getElementById("hours").innerHTML =
+        String(hours).padStart(2, "0");
+
+    document.getElementById("minutes").innerHTML =
+        String(minutes).padStart(2, "0");
+
+    document.getElementById("seconds").innerHTML =
+        String(seconds).padStart(2, "0");
+
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+
+// OPEN / CLOSE LETTER
+
 function openLetter() {
+
     const letter = document.getElementById("letter");
 
     if (letter.style.display === "block") {
+
         letter.style.display = "none";
+
     } else {
+
         letter.style.display = "block";
+
         letter.scrollIntoView({
             behavior: "smooth",
             block: "center"
         });
+
         createConfetti();
+
     }
+
 }
+
+
+// RSVP BUTTON
 
 function rsvp() {
+
     document.getElementById("rsvpMessage").innerHTML =
         "Yayyy! Can't wait to celebrate with you! 💙🤍";
+
     createConfetti();
+
 }
 
-function createHeart() {
-    const heart = document.createElement("div");
-    heart.className = "heart";
-    heart.innerHTML = Math.random() > 0.5 ? "💙" : "🤍";
 
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = (15 + Math.random() * 25) + "px";
-    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+// FLOATING HEARTS
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML =
+        Math.random() > 0.5 ? "💙" : "🤍";
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 25) + "px";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
 
     document.body.appendChild(heart);
 
     setTimeout(() => {
         heart.remove();
     }, 10000);
+
 }
 
 setInterval(createHeart, 500);
 
+
+// CONFETTI ANIMATION
+
 function createConfetti() {
+
     const symbols = ["💙", "🤍", "✨", "🎉"];
 
     for (let i = 0; i < 35; i++) {
+
         const confetti = document.createElement("div");
 
         confetti.innerHTML =
@@ -403,20 +675,31 @@ function createConfetti() {
 
         const duration = 2000 + Math.random() * 2500;
 
-        confetti.animate([
-            { transform: "translateY(0) rotate(0deg)", opacity: 1 },
+        confetti.animate(
+            [
+                {
+                    transform: "translateY(0) rotate(0deg)",
+                    opacity: 1
+                },
+                {
+                    transform: "translateY(100vh) rotate(720deg)",
+                    opacity: 0
+                }
+            ],
             {
-                transform: "translateY(100vh) rotate(720deg)",
-                opacity: 0
+                duration: duration,
+                easing: "ease-in"
             }
-        ], {
-            duration: duration,
-            easing: "ease-in"
-        });
+        );
 
-        setTimeout(() => confetti.remove(), duration);
+        setTimeout(() => {
+            confetti.remove();
+        }, duration);
+
     }
+
 }
+
 </script>
 
 </body>
